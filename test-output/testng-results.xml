@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="10154" started-at="2017-07-28T09:02:51Z" finished-at="2017-07-28T09:03:01Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="10154" started-at="2017-07-28T09:02:51Z" finished-at="2017-07-28T09:03:01Z">
+      <class name="com.test.automation.MastekBlanketPOM.login.TC001_Login">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.automation.MastekBlanketPOM.login.TC001_Login@5f341870]" name="setUp" is-config="true" duration-ms="8694" started-at="2017-07-28T14:32:51Z" finished-at="2017-07-28T14:32:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.test.automation.MastekBlanketPOM.login.TC001_Login@5f341870]" name="login" duration-ms="1241" started-at="2017-07-28T14:32:59Z" finished-at="2017-07-28T14:33:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.MastekBlanketPOM.login.TC001_Login@5f341870]" name="endTest" is-config="true" duration-ms="205" started-at="2017-07-28T14:33:01Z" finished-at="2017-07-28T14:33:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
+      </class> <!-- com.test.automation.MastekBlanketPOM.login.TC001_Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

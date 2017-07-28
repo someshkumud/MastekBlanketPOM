@@ -1,0 +1,6 @@
+2017-07-28 14:32:59 INFO  TC001_Login:24 - ============Starting Test : Login=============
+2017-07-28 14:32:59 INFO  LoginPage:34 - entered username - testUsername and object is [[FirefoxDriver: firefox on ANY (5e742090-cf2e-4ec3-a378-d90e61536f26)] -> id: txtUsername]
+2017-07-28 14:32:59 INFO  LoginPage:36 - entered password - testpassword and object is [[FirefoxDriver: firefox on ANY (5e742090-cf2e-4ec3-a378-d90e61536f26)] -> id: txtPassword]
+2017-07-28 14:33:00 INFO  LoginPage:38 - clicked login button and object is [[FirefoxDriver: firefox on ANY (5e742090-cf2e-4ec3-a378-d90e61536f26)] -> id: btnLogin]
+2017-07-28 14:33:01 INFO  LoginPage:42 - error message is : Invalid credentials
+2017-07-28 14:33:01 INFO  TC001_Login:28 - ============Finished Test : Login=============
