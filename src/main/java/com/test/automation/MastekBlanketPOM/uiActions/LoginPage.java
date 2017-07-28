@@ -24,7 +24,7 @@ public class LoginPage {
 	@FindBy(id="spanMessage")
 	WebElement spanMessage;
 	
-	@FindBy(id="welcome")
+	@FindBy(xpath="//*[@id='welcome']")
 	WebElement welcomeMessage;
 	
 	public LoginPage(WebDriver driver) {
@@ -33,10 +33,19 @@ public class LoginPage {
 	}
 	
 	public void loginToApplication(String username, String password) {
+		txtUsername.clear();
 		txtUsername.sendKeys(username);
 		log.info("entered username - "+username+" and object is "+txtUsername.toString());
+		txtPassword.clear();
 		txtPassword.sendKeys(password);
 		log.info("entered password - "+password+" and object is "+txtPassword.toString());
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		btnLogin.click();
 		log.info("clicked login button and object is "+btnLogin.toString());
 	}
