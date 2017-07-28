@@ -1,9 +1,10 @@
 package com.test.automation.MastekBlanketPOM.login;
 
 import org.apache.log4j.Logger;
-import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.test.automation.MastekBlanketPOM.testBase.TestBase;
@@ -18,14 +19,23 @@ public class TC001_Login extends TestBase {
 		init();
 	}
 	
+	@DataProvider(name="TestData")
+	public String[][] getTestData(){
+		String[][] testRecords = getData("Login.xlsx", "Login");
+		return testRecords;
+	}
 	
-	@Test
-	public void login(){
-		log.info("============Starting Test : Login=============");
+	
+	@Test(dataProvider="TestData")
+	public void login(String execute,String testCase,String username, String password, String message){
+		if(execute.equalsIgnoreCase("N")){
+			throw new SkipException("Skipping test as per data provided");
+		}
+		log.info("============Starting Test for Test Case : "+testCase+"=============");
 		loginpage=new LoginPage(driver);
-		loginpage.loginToApplication("testUsername", "testpassword");
-		Assert.assertEquals(loginpage.getLoginFailedText(), "Invalid credentials");
-		log.info("============Finished Test : Login=============");
+		loginpage.loginToApplication(username, password);
+		loginpage.verifyLogin(message);
+		log.info("============Finished Test for Test Case : "+testCase+"=============");
 	}
 	
 	@AfterClass

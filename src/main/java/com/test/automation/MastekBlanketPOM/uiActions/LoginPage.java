@@ -5,8 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import com.test.automation.MastekBlanketPOM.login.TC001_Login;
+import org.testng.Assert;
 
 public class LoginPage {
 	public static final Logger log=Logger.getLogger(LoginPage.class.getName());
@@ -25,6 +24,9 @@ public class LoginPage {
 	@FindBy(id="spanMessage")
 	WebElement spanMessage;
 	
+	@FindBy(id="welcome")
+	WebElement welcomeMessage;
+	
 	public LoginPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -39,9 +41,14 @@ public class LoginPage {
 		log.info("clicked login button and object is "+btnLogin.toString());
 	}
 	
-	public String getLoginFailedText() {
-		log.info("error message is : "+spanMessage.getText());
-		return spanMessage.getText();		
+	public void verifyLogin(String message){
+		if(spanMessage.isDisplayed()){
+			Assert.assertEquals(spanMessage.getText(), message);
+		}
+		else{
+			Assert.assertEquals(welcomeMessage.getText(), message);
+		}
 	}
+	
 
 }
