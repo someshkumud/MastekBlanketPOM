@@ -5,7 +5,9 @@
     <classes>
       <class name="com.test.automation.MastekBlanketPOM.login.TC001_Login">
         <methods>
+          <include name="afterMethod"/>
           <include name="setUp"/>
+          <include name="BeforeMethod"/>
           <include name="endTest"/>
           <include name="login" invocation-numbers="1 5"/>
         </methods>

@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class LoginPage {
 	public static final Logger log=Logger.getLogger(LoginPage.class.getName());
@@ -24,7 +23,7 @@ public class LoginPage {
 	@FindBy(id="spanMessage")
 	WebElement spanMessage;
 	
-	@FindBy(xpath="//*[@id='welcome']")
+	@FindBy(xpath="//a[@id='welcome']")
 	WebElement welcomeMessage;
 	
 	public LoginPage(WebDriver driver) {
@@ -47,16 +46,21 @@ public class LoginPage {
 			e.printStackTrace();
 		}
 		btnLogin.click();
-		log.info("clicked login button and object is "+btnLogin.toString());
+		log.info("clicked login button");
 	}
 	
-	public void verifyLogin(String message){
-		if(spanMessage.isDisplayed()){
-			Assert.assertEquals(spanMessage.getText(), message);
-		}
-		else{
-			Assert.assertEquals(welcomeMessage.getText(), message);
-		}
+	public String verifyLogin(){
+			try {
+				return spanMessage.getText();
+			} catch (Exception e) {
+				return welcomeMessage.getText();
+			}
+		
+		
+	}
+	
+	public void navigationMenu(String menuName) {
+		
 	}
 	
 

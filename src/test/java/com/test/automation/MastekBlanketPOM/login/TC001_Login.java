@@ -1,8 +1,10 @@
 package com.test.automation.MastekBlanketPOM.login;
 
+import java.io.IOException;
+
 import org.apache.log4j.Logger;
+import org.testng.Assert;
 import org.testng.SkipException;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -15,7 +17,7 @@ public class TC001_Login extends TestBase {
 	LoginPage loginpage;
 	
 	@BeforeClass
-	public void setUp(){
+	public void setUp() throws IOException{
 		init();
 	}
 	
@@ -34,12 +36,10 @@ public class TC001_Login extends TestBase {
 		log.info("============Starting Test for Test Case : "+testCase+"=============");
 		loginpage=new LoginPage(driver);
 		loginpage.loginToApplication(username, password);
-		loginpage.verifyLogin(message);
+		Assert.assertEquals(loginpage.verifyLogin(), message);
+		getScreenShot("TestLogin_"+testCase);
 		log.info("============Finished Test for Test Case : "+testCase+"=============");
 	}
 	
-	@AfterClass
-	public void endTest(){
-		driver.close();
-	}
+	
 }

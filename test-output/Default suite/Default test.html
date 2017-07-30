@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>4/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jul 28 21:52:58 IST 2017</td>
+<td>Started on:</td><td>Sun Jul 30 15:26:25 IST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>163 seconds (163171 ms)</td>
+<tr><td>Total time:</td><td>46 seconds (46247 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,34 +75,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.test.automation.MastekBlanketPOM.login.TC001_Login.login()'><b>login</b><br>Test class: com.test.automation.MastekBlanketPOM.login.TC001_Login<br>Parameters: Y, TC006, admin, admin, Welcome Admin</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;spanMessage&quot;}
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 60.07 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;PARTH&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\Parth\AppData\Local\Temp\scoped_dir32236_2345}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: a90d65d6a3a3be9517049412c1b9df1b
-*** Element info: {Using=id, value=spanMessage}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
-	at com.test.automation.MastekBlanketPOM.uiActions.LoginPage.verifyLogin(LoginPage.java:54)
-	at com.test.automation.MastekBlanketPOM.login.TC001_Login.login(TC001_Login.java:37)
+<td title='com.test.automation.MastekBlanketPOM.login.TC001_Login.login()'><b>login</b><br>Test class: com.test.automation.MastekBlanketPOM.login.TC001_Login<br>Parameters: Y, TC006, admin, admin, Welcome Somesh</td>
+<td><div><pre>java.lang.AssertionError: expected [Welcome Somesh] but found [Welcome Admin]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at com.test.automation.MastekBlanketPOM.login.TC001_Login.login(TC001_Login.java:39)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -128,34 +109,15 @@ Session ID: a90d65d6a3a3be9517049412c1b9df1b
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-</pre></div><a href='#' onClick='toggleBox("stack-trace192456457", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace192456457'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;spanMessage&quot;}
-  (Session info: chrome=59.0.3071.115)
-  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 60.07 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;PARTH&apos;, ip: &apos;192.168.0.105&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=C:\Users\Parth\AppData\Local\Temp\scoped_dir32236_2345}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: a90d65d6a3a3be9517049412c1b9df1b
-*** Element info: {Using=id, value=spanMessage}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
-	at com.test.automation.MastekBlanketPOM.uiActions.LoginPage.verifyLogin(LoginPage.java:54)
-	at com.test.automation.MastekBlanketPOM.login.TC001_Login.login(TC001_Login.java:37)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1059634518", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1059634518'><pre>java.lang.AssertionError: expected [Welcome Somesh] but found [Welcome Admin]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at com.test.automation.MastekBlanketPOM.login.TC001_Login.login(TC001_Login.java:39)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -182,8 +144,8 @@ Session ID: a90d65d6a3a3be9517049412c1b9df1b
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 </pre></div></td>
-<td>128</td>
-<td>com.test.automation.MastekBlanketPOM.login.TC001_Login@5f2108b5</td></tr>
+<td>17</td>
+<td>com.test.automation.MastekBlanketPOM.login.TC001_Login@29ba4338</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -193,25 +155,53 @@ Session ID: a90d65d6a3a3be9517049412c1b9df1b
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.test.automation.MastekBlanketPOM.login.TC001_Login.login()'><b>login</b><br>Test class: com.test.automation.MastekBlanketPOM.login.TC001_Login<br>Parameters: Y, TC001, somesh, test, Invalid credentials</td>
-<td></td>
-<td>5</td>
-<td>com.test.automation.MastekBlanketPOM.login.TC001_Login@5f2108b5</td></tr>
-<tr>
-<td title='com.test.automation.MastekBlanketPOM.login.TC001_Login.login()'><b>login</b><br>Test class: com.test.automation.MastekBlanketPOM.login.TC001_Login<br>Parameters: Y, TC003, admin, test, Invalid credentials</td>
+<td title='com.test.automation.MastekBlanketPOM.login.TC001_Login.login()'><b>login</b><br>Test class: com.test.automation.MastekBlanketPOM.login.TC001_Login<br>Parameters: Y, TC001, somesh, test, Invalid credentials<br/>
+<a href="#Output-647149086" onClick='toggleBox("Output-647149086", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-647149086" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-647149086">
+<a href='C:\Users\Parth\git\MastekBlanketPOM\src\main\java\com\test\automation\MastekBlanketPOM\screenShot\TestLogin_TC001_30_07_2017_03_26_39.png'><img src='C:\Users\Parth\git\MastekBlanketPOM\src\main\java\com\test\automation\MastekBlanketPOM\screenShot\TestLogin_TC001_30_07_2017_03_26_39.png' height='100' width='100'/></a><br/>
+</div>
+</td>
 <td></td>
 <td>4</td>
-<td>com.test.automation.MastekBlanketPOM.login.TC001_Login@5f2108b5</td></tr>
+<td>com.test.automation.MastekBlanketPOM.login.TC001_Login@29ba4338</td></tr>
 <tr>
-<td title='com.test.automation.MastekBlanketPOM.login.TC001_Login.login()'><b>login</b><br>Test class: com.test.automation.MastekBlanketPOM.login.TC001_Login<br>Parameters: Y, TC004, admin, , Password cannot be empty</td>
+<td title='com.test.automation.MastekBlanketPOM.login.TC001_Login.login()'><b>login</b><br>Test class: com.test.automation.MastekBlanketPOM.login.TC001_Login<br>Parameters: Y, TC003, admin, test, Invalid credentials<br/>
+<a href="#Output-1429616542" onClick='toggleBox("Output-1429616542", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1429616542" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1429616542">
+<a href='C:\Users\Parth\git\MastekBlanketPOM\src\main\java\com\test\automation\MastekBlanketPOM\screenShot\TestLogin_TC003_30_07_2017_03_26_44.png'><img src='C:\Users\Parth\git\MastekBlanketPOM\src\main\java\com\test\automation\MastekBlanketPOM\screenShot\TestLogin_TC003_30_07_2017_03_26_44.png' height='100' width='100'/></a><br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.test.automation.MastekBlanketPOM.login.TC001_Login@29ba4338</td></tr>
+<tr>
+<td title='com.test.automation.MastekBlanketPOM.login.TC001_Login.login()'><b>login</b><br>Test class: com.test.automation.MastekBlanketPOM.login.TC001_Login<br>Parameters: Y, TC004, admin, , Password cannot be empty<br/>
+<a href="#Output-955611965" onClick='toggleBox("Output-955611965", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-955611965" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-955611965">
+<a href='C:\Users\Parth\git\MastekBlanketPOM\src\main\java\com\test\automation\MastekBlanketPOM\screenShot\TestLogin_TC004_30_07_2017_03_26_48.png'><img src='C:\Users\Parth\git\MastekBlanketPOM\src\main\java\com\test\automation\MastekBlanketPOM\screenShot\TestLogin_TC004_30_07_2017_03_26_48.png' height='100' width='100'/></a><br/>
+</div>
+</td>
 <td></td>
 <td>3</td>
-<td>com.test.automation.MastekBlanketPOM.login.TC001_Login@5f2108b5</td></tr>
+<td>com.test.automation.MastekBlanketPOM.login.TC001_Login@29ba4338</td></tr>
 <tr>
-<td title='com.test.automation.MastekBlanketPOM.login.TC001_Login.login()'><b>login</b><br>Test class: com.test.automation.MastekBlanketPOM.login.TC001_Login<br>Parameters: Y, TC005, , admin, Username cannot be empty</td>
+<td title='com.test.automation.MastekBlanketPOM.login.TC001_Login.login()'><b>login</b><br>Test class: com.test.automation.MastekBlanketPOM.login.TC001_Login<br>Parameters: Y, TC005, , admin, Username cannot be empty<br/>
+<a href="#Output-1123226989" onClick='toggleBox("Output-1123226989", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1123226989" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1123226989">
+<a href='C:\Users\Parth\git\MastekBlanketPOM\src\main\java\com\test\automation\MastekBlanketPOM\screenShot\TestLogin_TC005_30_07_2017_03_26_52.png'><img src='C:\Users\Parth\git\MastekBlanketPOM\src\main\java\com\test\automation\MastekBlanketPOM\screenShot\TestLogin_TC005_30_07_2017_03_26_52.png' height='100' width='100'/></a><br/>
+</div>
+</td>
 <td></td>
 <td>3</td>
-<td>com.test.automation.MastekBlanketPOM.login.TC001_Login@5f2108b5</td></tr>
+<td>com.test.automation.MastekBlanketPOM.login.TC001_Login@29ba4338</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -223,7 +213,7 @@ Session ID: a90d65d6a3a3be9517049412c1b9df1b
 <tr>
 <td title='com.test.automation.MastekBlanketPOM.login.TC001_Login.login()'><b>login</b><br>Test class: com.test.automation.MastekBlanketPOM.login.TC001_Login<br>Parameters: N, TC002, test, admin, Invalid credentials</td>
 <td><div><pre>org.testng.SkipException: Skipping test as per data provided
-	at com.test.automation.MastekBlanketPOM.login.TC001_Login.login(TC001_Login.java:32)
+	at com.test.automation.MastekBlanketPOM.login.TC001_Login.login(TC001_Login.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -249,9 +239,9 @@ Session ID: a90d65d6a3a3be9517049412c1b9df1b
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1172535934", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1172535934'><pre>org.testng.SkipException: Skipping test as per data provided
-	at com.test.automation.MastekBlanketPOM.login.TC001_Login.login(TC001_Login.java:32)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1205580258", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1205580258'><pre>org.testng.SkipException: Skipping test as per data provided
+	at com.test.automation.MastekBlanketPOM.login.TC001_Login.login(TC001_Login.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -279,7 +269,7 @@ Session ID: a90d65d6a3a3be9517049412c1b9df1b
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 </pre></div></td>
 <td>0</td>
-<td>com.test.automation.MastekBlanketPOM.login.TC001_Login@5f2108b5</td></tr>
+<td>com.test.automation.MastekBlanketPOM.login.TC001_Login@29ba4338</td></tr>
 </table><p>
 </body>
 </html>
