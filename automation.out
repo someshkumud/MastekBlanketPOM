@@ -303,3 +303,202 @@
 2017-07-30 15:26:52 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (f1ebf68e3c16bb6eaeb4106d733a99a4)] -> id: txtPassword]
 2017-07-30 15:26:59 INFO  LoginPage:49 - clicked login button
 2017-07-30 15:27:11 INFO  TestBase:179 - Browser Closed
+2017-07-30 15:53:36 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC001=============
+2017-07-30 15:53:36 INFO  LoginPage:37 - entered username - somesh and object is [[ChromeDriver: chrome on WIN8_1 (088213d5744b2ef4e6b78f6d46a820ab)] -> id: txtUsername]
+2017-07-30 15:53:36 INFO  LoginPage:40 - entered password - test and object is [[ChromeDriver: chrome on WIN8_1 (088213d5744b2ef4e6b78f6d46a820ab)] -> id: txtPassword]
+2017-07-30 15:53:40 INFO  LoginPage:49 - clicked login button
+2017-07-30 15:53:41 INFO  TC001_Login:41 - ============Finished Test for Test Case : TC001=============
+2017-07-30 15:53:41 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC003=============
+2017-07-30 15:53:41 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (088213d5744b2ef4e6b78f6d46a820ab)] -> id: txtUsername]
+2017-07-30 15:53:41 INFO  LoginPage:40 - entered password - test and object is [[ChromeDriver: chrome on WIN8_1 (088213d5744b2ef4e6b78f6d46a820ab)] -> id: txtPassword]
+2017-07-30 15:53:45 INFO  LoginPage:49 - clicked login button
+2017-07-30 15:53:46 INFO  TC001_Login:41 - ============Finished Test for Test Case : TC003=============
+2017-07-30 15:53:46 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC004=============
+2017-07-30 15:53:46 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (088213d5744b2ef4e6b78f6d46a820ab)] -> id: txtUsername]
+2017-07-30 15:53:46 INFO  LoginPage:40 - entered password -  and object is [[ChromeDriver: chrome on WIN8_1 (088213d5744b2ef4e6b78f6d46a820ab)] -> id: txtPassword]
+2017-07-30 15:53:49 INFO  LoginPage:49 - clicked login button
+2017-07-30 15:53:50 INFO  TC001_Login:41 - ============Finished Test for Test Case : TC004=============
+2017-07-30 15:53:50 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC005=============
+2017-07-30 15:53:50 INFO  LoginPage:37 - entered username -  and object is [[ChromeDriver: chrome on WIN8_1 (088213d5744b2ef4e6b78f6d46a820ab)] -> id: txtUsername]
+2017-07-30 15:53:50 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (088213d5744b2ef4e6b78f6d46a820ab)] -> id: txtPassword]
+2017-07-30 15:53:53 INFO  LoginPage:49 - clicked login button
+2017-07-30 15:53:53 INFO  TC001_Login:41 - ============Finished Test for Test Case : TC005=============
+2017-07-30 15:53:53 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC006=============
+2017-07-30 15:53:53 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (088213d5744b2ef4e6b78f6d46a820ab)] -> id: txtUsername]
+2017-07-30 15:53:54 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (088213d5744b2ef4e6b78f6d46a820ab)] -> id: txtPassword]
+2017-07-30 15:54:00 INFO  LoginPage:49 - clicked login button
+2017-07-30 15:54:13 INFO  TestBase:179 - Browser Closed
+2017-07-31 19:22:05 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (53f04f8b768d00c149cefe0c19ce6f1e)] -> id: txtUsername]
+2017-07-31 19:22:05 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (53f04f8b768d00c149cefe0c19ce6f1e)] -> id: txtPassword]
+2017-07-31 19:22:14 INFO  LoginPage:49 - clicked login button
+2017-07-31 19:22:17 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 19:22:33 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 19:27:32 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (5cfb666dae934da7ebaeff0b35fb0367)] -> id: txtUsername]
+2017-07-31 19:27:32 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (5cfb666dae934da7ebaeff0b35fb0367)] -> id: txtPassword]
+2017-07-31 19:27:38 INFO  LoginPage:49 - clicked login button
+2017-07-31 19:27:38 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 19:27:47 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 19:27:48 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC003 for Leave Entitlement=============
+2017-07-31 19:27:48 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC004 for Leave Entitlement=============
+2017-07-31 19:27:50 INFO  TestBase:186 - Browser Closed
+2017-07-31 19:28:54 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (65537f3122662e5ec8caa3746c1af4b0)] -> id: txtUsername]
+2017-07-31 19:28:54 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (65537f3122662e5ec8caa3746c1af4b0)] -> id: txtPassword]
+2017-07-31 19:29:42 INFO  LoginPage:49 - clicked login button
+2017-07-31 19:29:43 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 19:35:08 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (6330e1cdd0d42494016e0f7ad2f2f108)] -> id: txtUsername]
+2017-07-31 19:35:08 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (6330e1cdd0d42494016e0f7ad2f2f108)] -> id: txtPassword]
+2017-07-31 19:35:15 INFO  LoginPage:49 - clicked login button
+2017-07-31 19:35:16 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 19:38:34 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 19:40:44 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (a6fac9b7f7cf4277091f2298f83fe54e)] -> id: txtUsername]
+2017-07-31 19:40:44 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (a6fac9b7f7cf4277091f2298f83fe54e)] -> id: txtPassword]
+2017-07-31 19:40:51 INFO  LoginPage:49 - clicked login button
+2017-07-31 19:40:51 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 19:41:11 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 19:57:34 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (34eab9bc303baa53753620b055b0656f)] -> id: txtUsername]
+2017-07-31 19:57:35 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (34eab9bc303baa53753620b055b0656f)] -> id: txtPassword]
+2017-07-31 19:57:40 INFO  LoginPage:49 - clicked login button
+2017-07-31 19:57:41 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:01:58 INFO  TC002_LeaveEntitlement:46 - ============Finished Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:01:58 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 20:05:13 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (347307f6cfafdb7fa4cbf6826024ffb6)] -> id: txtUsername]
+2017-07-31 20:05:13 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (347307f6cfafdb7fa4cbf6826024ffb6)] -> id: txtPassword]
+2017-07-31 20:05:19 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:05:20 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:05:37 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 20:05:38 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC003 for Leave Entitlement=============
+2017-07-31 20:05:38 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC004 for Leave Entitlement=============
+2017-07-31 20:05:40 INFO  TestBase:186 - Browser Closed
+2017-07-31 20:10:42 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (486d75cdc185b1c30886da449f6ba3eb)] -> id: txtUsername]
+2017-07-31 20:10:43 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (486d75cdc185b1c30886da449f6ba3eb)] -> id: txtPassword]
+2017-07-31 20:10:51 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:10:52 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:11:06 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 20:11:07 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC003 for Leave Entitlement=============
+2017-07-31 20:11:08 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC004 for Leave Entitlement=============
+2017-07-31 20:11:10 INFO  TestBase:186 - Browser Closed
+2017-07-31 20:12:26 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (c6d976c8a6a01e731cfdb677b9964fb5)] -> id: txtUsername]
+2017-07-31 20:12:26 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (c6d976c8a6a01e731cfdb677b9964fb5)] -> id: txtPassword]
+2017-07-31 20:12:45 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:12:45 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:13:04 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 20:13:05 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC003 for Leave Entitlement=============
+2017-07-31 20:13:06 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC004 for Leave Entitlement=============
+2017-07-31 20:13:08 INFO  TestBase:186 - Browser Closed
+2017-07-31 20:13:35 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (19defdc1eead951183f96c38ffd6a19a)] -> id: txtUsername]
+2017-07-31 20:13:36 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (19defdc1eead951183f96c38ffd6a19a)] -> id: txtPassword]
+2017-07-31 20:13:51 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:13:52 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:14:08 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 20:14:09 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC003 for Leave Entitlement=============
+2017-07-31 20:14:09 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC004 for Leave Entitlement=============
+2017-07-31 20:14:11 INFO  TestBase:186 - Browser Closed
+2017-07-31 20:30:51 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (2a939da2b9ae0ed70f13791575c24e88)] -> id: txtUsername]
+2017-07-31 20:30:51 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (2a939da2b9ae0ed70f13791575c24e88)] -> id: txtPassword]
+2017-07-31 20:30:59 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:31:00 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:33:01 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 20:33:12 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC003 for Leave Entitlement=============
+2017-07-31 20:34:30 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (763c70137be2bf8cdfaa3958e6299953)] -> id: txtUsername]
+2017-07-31 20:34:30 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (763c70137be2bf8cdfaa3958e6299953)] -> id: txtPassword]
+2017-07-31 20:34:39 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:34:40 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:34:52 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 20:35:03 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC003 for Leave Entitlement=============
+2017-07-31 20:35:42 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (652c390e3858a4ce080f5b5a877633cd)] -> id: txtUsername]
+2017-07-31 20:35:42 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (652c390e3858a4ce080f5b5a877633cd)] -> id: txtPassword]
+2017-07-31 20:35:50 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:35:51 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:36:42 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 20:39:26 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (bf7d6c5846f160d9a66d02f3d393d457)] -> id: txtUsername]
+2017-07-31 20:39:26 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (bf7d6c5846f160d9a66d02f3d393d457)] -> id: txtPassword]
+2017-07-31 20:39:34 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:39:35 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:39:55 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 20:45:12 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (ed7e3c6fd4386bbb8600d562d7754ef5)] -> id: txtUsername]
+2017-07-31 20:45:12 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (ed7e3c6fd4386bbb8600d562d7754ef5)] -> id: txtPassword]
+2017-07-31 20:45:20 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:45:21 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:45:37 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 20:45:43 INFO  TestBase:186 - Browser Closed
+2017-07-31 20:48:36 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (0d5d97dbaa0749ac2a6d1af8d240368c)] -> id: txtUsername]
+2017-07-31 20:48:37 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (0d5d97dbaa0749ac2a6d1af8d240368c)] -> id: txtPassword]
+2017-07-31 20:48:47 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:48:47 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:49:41 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 20:51:24 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (56b5f61d8e5417fe7edc9aac7b525ff5)] -> id: txtUsername]
+2017-07-31 20:51:24 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (56b5f61d8e5417fe7edc9aac7b525ff5)] -> id: txtPassword]
+2017-07-31 20:51:32 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:51:33 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:51:47 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC002 for Leave Entitlement=============
+2017-07-31 20:54:50 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (ad5cec10e02c647f8690fd075835994c)] -> id: txtUsername]
+2017-07-31 20:54:50 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (ad5cec10e02c647f8690fd075835994c)] -> id: txtPassword]
+2017-07-31 20:54:59 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:55:00 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 20:55:17 INFO  TestBase:186 - Browser Closed
+2017-07-31 20:58:50 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC001=============
+2017-07-31 20:58:50 INFO  LoginPage:37 - entered username - somesh and object is [[ChromeDriver: chrome on WIN8_1 (1dece8bc77a6ac0c3df96f8f0040de8d)] -> id: txtUsername]
+2017-07-31 20:58:50 INFO  LoginPage:40 - entered password - test and object is [[ChromeDriver: chrome on WIN8_1 (1dece8bc77a6ac0c3df96f8f0040de8d)] -> id: txtPassword]
+2017-07-31 20:58:55 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:58:56 INFO  TC001_Login:41 - ============Finished Test for Test Case : TC001=============
+2017-07-31 20:58:56 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC003=============
+2017-07-31 20:58:56 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (1dece8bc77a6ac0c3df96f8f0040de8d)] -> id: txtUsername]
+2017-07-31 20:58:56 INFO  LoginPage:40 - entered password - test and object is [[ChromeDriver: chrome on WIN8_1 (1dece8bc77a6ac0c3df96f8f0040de8d)] -> id: txtPassword]
+2017-07-31 20:59:00 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:59:00 INFO  TC001_Login:41 - ============Finished Test for Test Case : TC003=============
+2017-07-31 20:59:00 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC004=============
+2017-07-31 20:59:00 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (1dece8bc77a6ac0c3df96f8f0040de8d)] -> id: txtUsername]
+2017-07-31 20:59:01 INFO  LoginPage:40 - entered password -  and object is [[ChromeDriver: chrome on WIN8_1 (1dece8bc77a6ac0c3df96f8f0040de8d)] -> id: txtPassword]
+2017-07-31 20:59:04 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:59:04 INFO  TC001_Login:41 - ============Finished Test for Test Case : TC004=============
+2017-07-31 20:59:04 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC005=============
+2017-07-31 20:59:04 INFO  LoginPage:37 - entered username -  and object is [[ChromeDriver: chrome on WIN8_1 (1dece8bc77a6ac0c3df96f8f0040de8d)] -> id: txtUsername]
+2017-07-31 20:59:04 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (1dece8bc77a6ac0c3df96f8f0040de8d)] -> id: txtPassword]
+2017-07-31 20:59:07 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:59:08 INFO  TC001_Login:41 - ============Finished Test for Test Case : TC005=============
+2017-07-31 20:59:08 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC006=============
+2017-07-31 20:59:08 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (1dece8bc77a6ac0c3df96f8f0040de8d)] -> id: txtUsername]
+2017-07-31 20:59:08 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (1dece8bc77a6ac0c3df96f8f0040de8d)] -> id: txtPassword]
+2017-07-31 20:59:20 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:59:31 INFO  TestBase:186 - Browser Closed
+2017-07-31 20:59:31 INFO  TestBase:90 - Creating object of chrome
+2017-07-31 20:59:34 INFO  TestBase:109 - Navigating to http://opensource.demo.orangehrmlive.com
+2017-07-31 20:59:42 INFO  WebEventListener:123 - Navigate to:'http://opensource.demo.orangehrmlive.com'
+2017-07-31 20:59:44 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (1ec77abe031c818cc279676c5db7c7f8)] -> id: txtUsername]
+2017-07-31 20:59:44 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (1ec77abe031c818cc279676c5db7c7f8)] -> id: txtPassword]
+2017-07-31 20:59:59 INFO  LoginPage:49 - clicked login button
+2017-07-31 20:59:59 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 21:00:18 INFO  TC002_LeaveEntitlement:61 - ============Finished Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 21:00:20 INFO  TestBase:186 - Browser Closed
+2017-07-31 21:02:19 INFO  WebEventListener:123 - Navigate to:'http://opensource.demo.orangehrmlive.com'
+2017-07-31 21:02:19 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC001=============
+2017-07-31 21:02:19 INFO  LoginPage:37 - entered username - somesh and object is [[ChromeDriver: chrome on WIN8_1 (d55cc030bb4b11ddc95f06dfb594ace2)] -> id: txtUsername]
+2017-07-31 21:02:19 INFO  LoginPage:40 - entered password - test and object is [[ChromeDriver: chrome on WIN8_1 (d55cc030bb4b11ddc95f06dfb594ace2)] -> id: txtPassword]
+2017-07-31 21:02:20 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (ab3894960f62f0ac55e8b8dc4a20dded)] -> id: txtUsername]
+2017-07-31 21:02:20 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (ab3894960f62f0ac55e8b8dc4a20dded)] -> id: txtPassword]
+2017-07-31 21:02:24 INFO  LoginPage:49 - clicked login button
+2017-07-31 21:02:24 INFO  TC001_Login:41 - ============Finished Test for Test Case : TC001=============
+2017-07-31 21:02:24 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC003=============
+2017-07-31 21:02:25 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (d55cc030bb4b11ddc95f06dfb594ace2)] -> id: txtUsername]
+2017-07-31 21:02:25 INFO  LoginPage:40 - entered password - test and object is [[ChromeDriver: chrome on WIN8_1 (d55cc030bb4b11ddc95f06dfb594ace2)] -> id: txtPassword]
+2017-07-31 21:02:26 INFO  LoginPage:49 - clicked login button
+2017-07-31 21:02:26 INFO  TC002_LeaveEntitlement:40 - ============Starting Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 21:02:29 INFO  LoginPage:49 - clicked login button
+2017-07-31 21:02:29 INFO  TC001_Login:41 - ============Finished Test for Test Case : TC003=============
+2017-07-31 21:02:29 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC004=============
+2017-07-31 21:02:29 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (d55cc030bb4b11ddc95f06dfb594ace2)] -> id: txtUsername]
+2017-07-31 21:02:29 INFO  LoginPage:40 - entered password -  and object is [[ChromeDriver: chrome on WIN8_1 (d55cc030bb4b11ddc95f06dfb594ace2)] -> id: txtPassword]
+2017-07-31 21:02:33 INFO  LoginPage:49 - clicked login button
+2017-07-31 21:02:33 INFO  TC001_Login:41 - ============Finished Test for Test Case : TC004=============
+2017-07-31 21:02:33 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC005=============
+2017-07-31 21:02:33 INFO  LoginPage:37 - entered username -  and object is [[ChromeDriver: chrome on WIN8_1 (d55cc030bb4b11ddc95f06dfb594ace2)] -> id: txtUsername]
+2017-07-31 21:02:33 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (d55cc030bb4b11ddc95f06dfb594ace2)] -> id: txtPassword]
+2017-07-31 21:02:36 INFO  LoginPage:49 - clicked login button
+2017-07-31 21:02:37 INFO  TC001_Login:41 - ============Finished Test for Test Case : TC005=============
+2017-07-31 21:02:37 INFO  TC001_Login:36 - ============Starting Test for Test Case : TC006=============
+2017-07-31 21:02:37 INFO  LoginPage:37 - entered username - admin and object is [[ChromeDriver: chrome on WIN8_1 (d55cc030bb4b11ddc95f06dfb594ace2)] -> id: txtUsername]
+2017-07-31 21:02:37 INFO  LoginPage:40 - entered password - admin and object is [[ChromeDriver: chrome on WIN8_1 (d55cc030bb4b11ddc95f06dfb594ace2)] -> id: txtPassword]
+2017-07-31 21:02:43 INFO  LoginPage:49 - clicked login button
+2017-07-31 21:02:49 INFO  TC002_LeaveEntitlement:61 - ============Finished Test for Test Case : TC001 for Leave Entitlement=============
+2017-07-31 21:02:50 INFO  TestBase:186 - Browser Closed
+2017-07-31 21:02:55 INFO  TestBase:186 - Browser Closed

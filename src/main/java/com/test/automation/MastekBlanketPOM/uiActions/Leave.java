@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -21,6 +22,7 @@ public class Leave extends TestBase {
 	
 	WebDriver driver;
 	private static List<WebElement> tableData = null;
+//	public boolean menuSelected=false;
 	public static boolean menuSelected=false;
 	private List<List<String>> actualData=null;
 	
@@ -293,6 +295,7 @@ public class Leave extends TestBase {
 			dpSubunit.selectByVisibleText(subUnit);
 		}else{
 			employeeName.sendKeys(empName);
+			employeeName.sendKeys(Keys.TAB);
 		}
 		
 		Select dpLeaveType = new Select(this.leaveType);  
@@ -301,18 +304,21 @@ public class Leave extends TestBase {
 		Select dpLeavePeriod = new Select(this.leavePeriod);  
 		dpLeavePeriod.selectByVisibleText(leavePeriod);
 		
+		entitlement=removeDecimalFromString(entitlement);
+		
 		leaveEntitlement.sendKeys(entitlement);
 		
 		btnSave.click();
-		
 		try {
+			//waitForElement(10000,btnDialogConfirm);
+			Thread.sleep(5000);
 			if(btnDialogConfirm.isDisplayed())
 			btnDialogConfirm.click();
 			else if(btnUpdateEntitlementConfirm.isDisplayed())
 				
 					{
 						String temp[]=entitlementUpdateConfirm.getText().split(" ");
-						entitlement=temp[temp.length-1];
+						entitlement=removeDecimalFromString(temp[temp.length-1]);
 					}
 				btnUpdateEntitlementConfirm.click();
 		} catch (Exception e) {
@@ -327,6 +333,13 @@ public class Leave extends TestBase {
 		return leaveEntitled.getText();
 	}
 
+	public String removeDecimalFromString(String str) {
+		if(str.contains(".")) {
+			String temp[] = str.split("\\.");
+			str= temp[0];
+		}
+		return str;
+	}
 	
 	
 }

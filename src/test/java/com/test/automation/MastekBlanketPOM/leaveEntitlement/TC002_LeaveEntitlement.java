@@ -38,13 +38,26 @@ public class TC002_LeaveEntitlement extends TestBase {
 			throw new SkipException("Skipping test as per data provided");
 		}
 		log.info("============Starting Test for Test Case : "+testCase+" for Leave Entitlement=============");
-		//loginpage=new LoginPage(driver);
-		//leavePage=new Leave(driver);
+		
+		Leave.menuSelected=false;
 		leavePage.selectMenuOptimized("Leave>Entitlements>Add Entitlements");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		String expectedLeavesEntitled=leavePage.addLeaveEntitlement(multipleEmp, location, subUnit, empName, leaveType, leavePeriod, entitlement);
 		String actualLeaveEntitled=leavePage.leaveEntitled();
+		actualLeaveEntitled=leavePage.removeDecimalFromString(actualLeaveEntitled);
 		Assert.assertEquals(actualLeaveEntitled, expectedLeavesEntitled);
 		//getScreenShot("LeaveEntitlement_"+testCase);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		log.info("============Finished Test for Test Case : "+testCase+" for Leave Entitlement=============");
 	}
 	
