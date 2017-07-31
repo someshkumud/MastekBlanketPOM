@@ -10,12 +10,12 @@ import org.testng.annotations.ITestAnnotation;
 public class RetryListener implements IAnnotationTransformer {
 
 	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
-		IRetryAnalyzer retry=annotation.getRetryAnalyzer();
+		/*IRetryAnalyzer retry=annotation.getRetryAnalyzer();
 		
 		if(retry==null) {
 			annotation.setRetryAnalyzer(Retry.class);
 		}
-		
+		*/
 	}
 
 }

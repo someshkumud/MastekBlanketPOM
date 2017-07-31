@@ -5,7 +5,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -13,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -46,6 +49,10 @@ public class TestBase {
 	ExcelReader excel;
 	public Properties OR=new Properties();
 	public ITestResult result;
+	private static List<WebElement> tblRows=null, tblCols=null, dateElements=null;
+	private static List<List<String>> tableData = null;
+	private static List<String> colData = null;
+	
 	
 	public EventFiringWebDriver getDriver() {
 		return driver;		
@@ -56,13 +63,7 @@ public class TestBase {
 		SimpleDateFormat formater=new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
 		extent=new ExtentReports(System.getProperty("user.dir")+"\\src\\main\\java\\com\\test\\automation\\MastekBlanketPOM\\report\\MastekBlanket"+formater.format(cal.getTime())+".html",false);
 	}
-	
-	public void loadPropertiesFile() throws IOException{
-		//OR=new Properties();
-		File file = new File(System.getProperty("user.dir")+"\\src\\main\\java\\com\\test\\automation\\MastekBlanketPOM\\config\\config.properties");
-		FileInputStream fileInput = new FileInputStream(file);
-		OR.load(fileInput);
-	}
+
 	
 	public void setDriver(EventFiringWebDriver driver) {
 		this.driver=driver;
@@ -76,7 +77,13 @@ public class TestBase {
 		PropertyConfigurator.configure(log4jConfigPath);
 	}
 
-
+	
+	public void loadPropertiesFile() throws IOException{
+		//OR=new Properties();
+		File file = new File(System.getProperty("user.dir")+"\\src\\main\\java\\com\\test\\automation\\MastekBlanketPOM\\config\\config.properties");
+		FileInputStream fileInput = new FileInputStream(file);
+		OR.load(fileInput);
+	}
 	
 		
 	public void selectBrowser(String browser) {
@@ -181,4 +188,73 @@ public class TestBase {
 		extent.flush();		
 	}
 	
+	public static List<WebElement> readDateTable(WebElement WebTableElement,String date){
+		int dd=Integer.parseInt(date);
+		date=Integer.toString(dd);
+		dateElements=new ArrayList<WebElement>();
+		tblRows = WebTableElement.findElements(By.tagName("tr"));
+		for(int i=0; i < tblRows.size(); i++){
+			WebElement row = tblRows.get(i);
+			tblCols = row.findElements(By.tagName("td"));
+			for(int j=0; j < tblCols.size(); j++)			
+				if (tblCols.get(j).getText().equalsIgnoreCase(date)) {
+					dateElements.add(tblCols.get(j));
+				} 
+		}		
+		return dateElements;
+	}	
+	
+	public static List<List<String>> readTableData(WebElement WebTableElement){
+		tableData = new ArrayList<List<String>>();
+		tblRows = WebTableElement.findElements(By.tagName("tr"));
+		for(int i=0; i < tblRows.size(); i++){
+			WebElement row = tblRows.get(i);
+			colData = new ArrayList<String>();
+			tblCols = row.findElements(By.tagName("td"));
+			for(int j=0; j < tblCols.size(); j++)			
+				colData.add(tblCols.get(j).getText());			
+			tableData.add(colData);
+		}		
+		return tableData;
+	}	
+	
+	
+	public static List<List<String>> readTableDataSkipEmptyRow(WebElement WebTableElement, int startRow, int startCol){
+		tableData = new ArrayList<List<String>>();
+		tblRows = WebTableElement.findElements(By.tagName("tr"));
+		for(int i=startRow; i < tblRows.size(); i++){
+			WebElement row = tblRows.get(i);
+			colData = new ArrayList<String>();
+			tblCols = row.findElements(By.tagName("td"));
+			for(int j=startCol; j < tblCols.size(); j++){	
+				if(!tblCols.get(j).getText().equalsIgnoreCase("")){
+				colData.add(tblCols.get(j).getText());	
+				}
+			}
+			if(colData.size()!=0){
+			tableData.add(colData);
+			}
+		}		
+		return tableData;
+	}
+	
+	public static List<List<String>> readTableData(WebElement WebTableElement, int startRow, int startCol){
+		tableData = new ArrayList<List<String>>();
+		tblRows = WebTableElement.findElements(By.tagName("tr"));
+		for(int i=startRow; i < tblRows.size(); i++){
+			WebElement row = tblRows.get(i);
+			colData = new ArrayList<String>();
+			tblCols = row.findElements(By.tagName("td"));
+			if(tblCols.size()==0){
+				tblCols = row.findElements(By.tagName("th"));
+			}			
+			for(int j=startCol; j < tblCols.size(); j++)			
+				colData.add(tblCols.get(j).getText());			
+			tableData.add(colData);
+			
+		}		
+		return tableData;
+	}
+	
+
 }
