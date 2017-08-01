@@ -19,10 +19,10 @@ public class Listener extends TestBase implements ITestListener{
 	}
 
 	public void onTestFailure(ITestResult result) {
-		String methodName=result.getName();
+	/*	String methodName=result.getName();
 		if(!result.isSuccess()) {
-			getScreenShot(methodName);
-		}
+			//getScreenShot(methodName);
+		}*/
 		
 	}
 

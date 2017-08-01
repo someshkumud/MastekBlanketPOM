@@ -37,7 +37,7 @@ public class TC001_Login extends TestBase {
 		loginpage=new LoginPage(driver);
 		loginpage.loginToApplication(username, password);
 		Assert.assertEquals(loginpage.verifyLogin(), message);
-		getScreenShot("TestLogin_"+testCase);
+		//getScreenShot("TestLogin_"+testCase);
 		log.info("============Finished Test for Test Case : "+testCase+"=============");
 	}
 	

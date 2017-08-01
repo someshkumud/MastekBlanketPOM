@@ -4,20 +4,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
-
-import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,27 +18,20 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
-import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
 import com.test.automation.MastekBlanketPOM.excelReader.ExcelReader;
-import com.test.automation.MastekBlanketPOM.listener.WebEventListener;
 
 public class TestBase {
 
 	public static final Logger log=Logger.getLogger(TestBase.class.getName());
 	public WebDriver dr;
 	public EventFiringWebDriver driver;
-	public WebEventListener eventListener;
-	public static ExtentReports extent;
-	public static ExtentTest test;
 	ExcelReader excel;
 	public Properties OR=new Properties();
 	public ITestResult result;
@@ -57,13 +43,13 @@ public class TestBase {
 	public EventFiringWebDriver getDriver() {
 		return driver;		
 	}
-	
+	/*
 	static {
 		Calendar cal=Calendar.getInstance();
 		SimpleDateFormat formater=new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
 		extent=new ExtentReports(System.getProperty("user.dir")+"\\src\\main\\java\\com\\test\\automation\\MastekBlanketPOM\\report\\MastekBlanket"+formater.format(cal.getTime())+".html",false);
 	}
-
+*/
 	
 	public void setDriver(EventFiringWebDriver driver) {
 		this.driver=driver;
@@ -79,7 +65,6 @@ public class TestBase {
 
 	
 	public void loadPropertiesFile() throws IOException{
-		//OR=new Properties();
 		File file = new File(System.getProperty("user.dir")+"\\src\\main\\java\\com\\test\\automation\\MastekBlanketPOM\\config\\config.properties");
 		FileInputStream fileInput = new FileInputStream(file);
 		OR.load(fileInput);
@@ -101,8 +86,6 @@ public class TestBase {
 			dr=new InternetExplorerDriver();
 		}	
 		driver=new EventFiringWebDriver(dr);
-		eventListener=new WebEventListener();
-		driver.register(eventListener);
 	}
 	
 	public void getURL(String url) {
@@ -124,7 +107,7 @@ public class TestBase {
 		WebDriverWait wait=new WebDriverWait(driver, timeOutInSeconds);
 		wait.until(ExpectedConditions.visibilityOf(element));		
 	}
-
+/*
 	public String getScreenShot(String name) {
 		if(name=="") {
 			name="blank";
@@ -144,36 +127,24 @@ public class TestBase {
 		}
 		return destFile.toString();
 	}
-	
+	*/
 	
 	public void getAllWindows() {
 		
-		//To Do : Code to handel window
+
 	}
-	
-	public void getResult(ITestResult result) {
-		if(result.getStatus()==ITestResult.SUCCESS) {
-			test.log(LogStatus.PASS, result.getName()+" test is Pass");
-		}else if(result.getStatus()==ITestResult.SKIP) {
-			test.log(LogStatus.SKIP, result.getName()+" test is Skipped with Reason :"+result.getThrowable());
-		}else if(result.getStatus()==ITestResult.FAILURE) {
-			test.log(LogStatus.ERROR, result.getName()+" test is Failed with Reason :"+result.getThrowable());
-			test.log(LogStatus.FAIL, test.addScreenCapture(getScreenShot("")));
-		}else if(result.getStatus()==ITestResult.STARTED) {
-			test.log(LogStatus.INFO, result.getName()+" test is Started");
-		}
-		
-	}
-	
+
 	@AfterMethod
 	public void afterMethod(ITestResult result) {
-		getResult(result);
+		//getResult(result);
 	}
 	
 	@BeforeMethod
 	public void BeforeMethod(Method result) {
-		test=extent.startTest(result.getName());
-		test.log(LogStatus.INFO, result.getName()+" test started");
+	//	test=extent.startTest(result.getName());
+	//	test.log(LogStatus.INFO, result.getName()+" test started");
+		
+		
 	}
 	
 	@AfterClass(alwaysRun=true)
@@ -184,8 +155,8 @@ public class TestBase {
 	private void closeBrowser() {
 		driver.quit();
 		log.info("Browser Closed");
-		extent.endTest(test);
-		extent.flush();		
+		//extent.endTest(test);
+		//extent.flush();		
 	}
 	
 	public static List<WebElement> readDateTable(WebElement WebTableElement,String date){
@@ -256,5 +227,16 @@ public class TestBase {
 		return tableData;
 	}
 	
+	public void selectByPartOfVisibleText(WebElement element, String partValue) {
+		Select dpElement = new Select(element);
+	    List<WebElement> optionElements = element.findElements(By.tagName("option"));
+	    for (WebElement optionElement: optionElements) {
+	        if (optionElement.getText().contains(partValue)) {
+	            String optionIndex = optionElement.getAttribute("index");
+	            dpElement.selectByIndex(Integer.parseInt(optionIndex));
+	            break;
+	        }
+	    }
 
+	}
 }

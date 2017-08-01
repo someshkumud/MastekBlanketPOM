@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+//import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.test.automation.MastekBlanketPOM.testBase.TestBase;
@@ -22,9 +22,8 @@ public class Leave extends TestBase {
 	
 	WebDriver driver;
 	private static List<WebElement> tableData = null;
-//	public boolean menuSelected=false;
 	public static boolean menuSelected=false;
-	private List<List<String>> actualData=null;
+	//private List<List<String>> actualData=null;
 	
 	
 	public Leave(WebDriver driver) {
@@ -171,7 +170,7 @@ public class Leave extends TestBase {
 		String arMenu[]=menu.split(">");			
 		int menuIndex=0;
 		menuNevigate(allMenus,arMenu,menuIndex);		
-		
+		menuSelected=false;
 		
 	}
 	
@@ -287,10 +286,9 @@ public class Leave extends TestBase {
 	public String addLeaveEntitlement(String multipleEmp,String location,String subUnit,String empName,String leaveType, String leavePeriod, String entitlement){
 		if(multipleEmp.equalsIgnoreCase("Y")){
 			multipleEmployee.click();
-			
-			Select dpLocation = new Select(empLocation);  
-			dpLocation.selectByVisibleText(location);
-			
+			 
+			selectByPartOfVisibleText(empLocation, location);
+			//dpLocation.selectByVisibleText(".*"+location+".*");
 			Select dpSubunit = new Select(empSubunit);  
 			dpSubunit.selectByVisibleText(subUnit);
 		}else{
@@ -329,7 +327,7 @@ public class Leave extends TestBase {
 		
 	}
 	
-	public String leaveEntitled(){
+	public String leaveEntitled() throws Exception{
 		return leaveEntitled.getText();
 	}
 
