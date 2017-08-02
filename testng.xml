@@ -8,8 +8,9 @@
 </listeners>
   <test name="TC001_Login">
     <classes>
-      <class name="com.test.automation.MastekBlanketPOM.login.TC001_Login"/>
-     <class name="com.test.automation.MastekBlanketPOM.leaveEntitlement.TC002_LeaveEntitlement"/>
+<!--       <class name="com.test.automation.MastekBlanketPOM.login.TC001_Login"/> -->
+<!--      <class name="com.test.automation.MastekBlanketPOM.leaveEntitlement.TC002_LeaveEntitlement"/> -->
+     <class name="com.test.automation.MastekBlanketPOM.assignLeave.TC003_AssignLeave"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

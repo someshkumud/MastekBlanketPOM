@@ -1,19 +1,21 @@
 package com.test.automation.MastekBlanketPOM.uiActions;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-//import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.Select;
-
 import com.test.automation.MastekBlanketPOM.testBase.TestBase;
+
 
 
 public class Leave extends TestBase {
@@ -28,8 +30,8 @@ public class Leave extends TestBase {
 	
 	public Leave(WebDriver driver) {
 		this.driver=driver;
-		PageFactory.initElements(driver, this);
-		//PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
+		//PageFactory.initElements(driver, this);
+		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
 	}
 	
 	@FindBy(id="welcome")
@@ -74,24 +76,27 @@ public class Leave extends TestBase {
 	@FindBy(xpath="//ol[@id='employee_entitlement_update']/span")
 	private WebElement entitlementUpdateConfirm;
 	
+	@FindBy(id="assignleave_txtEmployee_empName")
+	private WebElement txtEmployee;
+	
+	@FindBy(id="assignleave_txtLeaveType")
+	private WebElement dropdownLeaveType;
+	
+	@FindBy(id="leaveBalance_details_link")
+	private WebElement viewDetailsLink;
 	
 	@FindBy(id="confirmOkButton")
 	private WebElement confirmOkButton;
 	
-	@FindBy(id="leaveBalance_details_link")
-	private WebElement viewDetailsLink;
+	@FindBy(id="assignleave_leaveBalance")
+	private WebElement leaveBalance;
+	
 	
 	@FindBy(id="confirmCancelButton")
 	private WebElement confirmCancelButton;
 	
 	@FindBy(linkText="Assign Leave")
 	private WebElement assignLeave;
-	
-	@FindBy(id="assignleave_txtEmployee_empName")
-	private WebElement txtEmployee;
-	
-	@FindBy(id="assignleave_txtLeaveType")
-	private WebElement dropdownLeaveType;
 	
 	@FindBy(id="assignleave_partialDays")
 	private WebElement dropdownPartialDays;
@@ -108,12 +113,37 @@ public class Leave extends TestBase {
 	@FindBy(id="assignleave_firstDuration_ampm")
 	private WebElement dropdownAMPM;
 	
+	@FindBy(id="assignleave_secondDuration_duration")
+	private WebElement dropdownDurationSecond;
+
+	@FindBy(id="assignleave_secondDuration_ampm")
+	private WebElement dropdownAMPMSecond;
+	
+	
 	@FindBy(xpath="//form[@id='frmLeaveApply']/fieldset/ol/li[1]/span")
 	public WebElement velidateEmpName;
 	
 	@FindBy(xpath="//form[@id='frmLeaveApply']/fieldset/ol/li[5]/span")
 	public WebElement velidateToDate;
 	
+	@FindBy(id="assignleave_firstDuration_time_from")
+	public WebElement asssignLeaveTimeFrom;
+	
+	@FindBy(id="assignleave_firstDuration_time_to")
+	public WebElement asssignLeaveTimeTo;
+	
+	@FindBy(id="assignleave_secondDuration_time_from")
+	public WebElement asssignLeaveTimeFromSecond;
+	
+	@FindBy(id="assignleave_secondDuration_time_to")
+	public WebElement asssignLeaveTimeToSecond;
+	
+	@FindBy(xpath="//span[@id='assignleave_firstDuration_specify_time_content']/span")
+	public WebElement velidateStartDay;
+	
+	@FindBy(xpath="//span[@id='assignleave_secondDuration_specify_time_content']/span")
+	public WebElement velidateEndDay;
+
 	@FindBy(xpath="//div[@id='wrapper']/div[2]/ul")
 	private WebElement allMenus;
 	
@@ -158,12 +188,7 @@ public class Leave extends TestBase {
 		Select leaveType = new Select(dropdownLeaveType);  
 		leaveType.selectByVisibleText(value);
 	}
-	/*
-	public void selectPartialDays(String value){
-		Select leaveType = new Select(dropdownPartialDays);  
-		leaveType.selectByVisibleText(value);
-	}
-	*/
+
 
 	public void selectMenuOptimized(String menu){
 		
@@ -208,10 +233,10 @@ public class Leave extends TestBase {
 	}
 	
 	public void selectDate(String dateType, String date){
-		String arDate[]=date.split("/");
-		String dd=arDate[0];
+		String arDate[]=date.split("-");
+		String dd=arDate[2];
 		int mm=Integer.parseInt(arDate[1]);
-		String yyyy=arDate[2];
+		String yyyy=arDate[0];
 		
 		try {
 			Thread.sleep(3000);
@@ -339,5 +364,113 @@ public class Leave extends TestBase {
 		return str;
 	}
 	
+	public void selectDropdown(WebElement element, String value){
+		
+		try {
+			if(isElementPresent(element)){
+			Select dropdown = new Select(element);  
+			dropdown.selectByVisibleText(value);
+			}
+		} catch (Exception e) {
+
+		}
+
+	}
+	
+	public boolean isElementPresent(WebElement element)  
+	 {  
+	               driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);  
+	               try  
+	               {  
+	                    if(element.isDisplayed())
+	                    	return true;  
+	                    else
+	                    	return false;
+	               }  
+	               catch(NoSuchElementException e)  
+	               {  
+	                   return false;  
+	               }  
+	              finally  
+	              {  
+	                  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);  
+	              }  
+	    }
+	
+	
+	public String getLeaveBalance(){
+		String leaveBalance="";
+		
+		leaveBalance=this.leaveBalance.getText().split("\\.")[0];		
+		return leaveBalance;
+	}
+	
+	public String assignLeave(String empName,String leaveType, String fromDate, String toDate,String partDays, 
+			String duration,String amPM,String durationSec,String amPMSec,String startDayFrom,String startDayTo,
+			String endDayFrom,String endDayTo, String comment){
+		txtEmployee.clear();
+		txtEmployee.sendKeys(empName);
+		txtEmployee.sendKeys(Keys.TAB);
+		
+		selectDropdown(this.dropdownLeaveType,leaveType);
+				
+		selectDate("from", fromDate);
+		
+		selectDate("to", toDate);
+		
+		selectDropdown(this.dropdownPartialDays,partDays);
+		
+		selectDropdown(this.dropdownDuration,duration);		
+		
+		selectDropdown(this.dropdownAMPM,amPM);
+	
+		selectDropdown(this.dropdownDurationSecond,durationSec);
+		
+		selectDropdown(this.dropdownAMPMSecond,amPMSec);
+
+		selectDropdown(this.asssignLeaveTimeFrom,startDayFrom);
+		
+		selectDropdown(this.asssignLeaveTimeTo,startDayTo);
+
+		selectDropdown(this.asssignLeaveTimeFromSecond,endDayFrom);
+		
+		selectDropdown(this.asssignLeaveTimeToSecond,endDayTo);		
+		
+		txtComment.clear();
+		txtComment.sendKeys(comment);
+		txtComment.sendKeys(Keys.TAB);
+		
+		String actualError=verifyAssignLeaveError();
+		if(actualError!=""){
+			return actualError;
+		}else
+		{
+		btnAssign.click();		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+		}
+		if(isElementPresent(confirmOkButton))
+		confirmOkButton.click();
+		
+		return "";
+		}
+		
+	}
+	
+	public String verifyAssignLeaveError(){
+
+				if(isElementPresent(velidateEmpName))
+					return velidateEmpName.getText();
+				else if(isElementPresent(velidateEmpName))
+					return velidateToDate.getText();
+				else if(isElementPresent(velidateStartDay))
+					return velidateStartDay.getText();
+				else if(isElementPresent(velidateEndDay))
+					return velidateEndDay.getText();
+				else
+					return "";	
+		
+	}
 	
 }
