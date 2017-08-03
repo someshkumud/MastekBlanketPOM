@@ -45,6 +45,7 @@ public class TC003_AssignLeave extends TestBase {
 		log.info("============Starting Test for Test Case : "+testCase+" for Leave Assignment=============");
 		
 		leavePage.selectMenuOptimized("Leave>Assign Leave");
+		log.info("Menu : Leave>Assign Leave selected");
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e1) {
@@ -58,13 +59,23 @@ public class TC003_AssignLeave extends TestBase {
 		actualLeaveBalance=leavePage.getLeaveBalance();
 
 		try {
+			if(expectedLeaveBalance!="")
 			Assert.assertEquals(actualLeaveBalance, expectedLeaveBalance);
-			Assert.assertEquals(actualError, error);
+			
 		} catch (Exception e) {
-
+			
+			
 		}finally {
+			try{
+				if(error!="")
+				Assert.assertEquals(actualError, error);
+			}catch(Exception e1){
+				
+			}
+			finally{
 			leavePage.selectMenuOptimized("Dashboard");
-			log.info("============Finished Test for Test Case : "+testCase+" for Leave Assignment=============");			
+			log.info("============Finished Test for Test Case : "+testCase+" for Leave Assignment=============");
+			}
 		}
 	}
 	

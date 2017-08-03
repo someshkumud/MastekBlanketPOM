@@ -270,6 +270,7 @@ public class Leave extends TestBase {
 				break;
 			} 
 		}
+
 		
 	}
 	
@@ -379,7 +380,7 @@ public class Leave extends TestBase {
 	
 	public boolean isElementPresent(WebElement element)  
 	 {  
-	               driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);  
+	               driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);  
 	               try  
 	               {  
 	                    if(element.isDisplayed())
@@ -449,6 +450,7 @@ public class Leave extends TestBase {
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
+			
 		}
 		if(isElementPresent(confirmOkButton))
 		confirmOkButton.click();
@@ -462,7 +464,7 @@ public class Leave extends TestBase {
 
 				if(isElementPresent(velidateEmpName))
 					return velidateEmpName.getText();
-				else if(isElementPresent(velidateEmpName))
+				else if(isElementPresent(velidateToDate))
 					return velidateToDate.getText();
 				else if(isElementPresent(velidateStartDay))
 					return velidateStartDay.getText();
